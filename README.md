@@ -12,4 +12,10 @@ docker pull lil5/appimage-builder
 docker run -i -v .:/app lil5/appimage-builder bash -c 'cd /app && appimage-builder --recipe AppImageBuilder.yml --skip-test'
 ```
 
-##### Dockerimage build template :heart: [lil5](https://github.com/lil5)
+# Repository
+
+<https://github.com/lil5/appimage-builder-docker>
+
+---
+
+##### Dockerimage build template ❤️ [lil5](https://github.com/lil5)
