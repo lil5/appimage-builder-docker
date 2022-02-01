@@ -1,0 +1,5 @@
+/example/app_binary
+/example/app_name
+/example/AppDir
+*.AppImage
+/example/appimage-builder-cache

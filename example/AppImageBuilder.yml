@@ -1,0 +1,25 @@
+# env VERSION must be given
+# e.g.:
+# VERSION=1.0.0 appimage-builder --recipe AppImageBuilder.yml
+#
+
+version: 1
+script:
+  - rm -rf AppDir; mkdir AppDir
+  - gcc -o app_binary main.c
+  - cp -r app_binary AppDir/
+  - mkdir -p AppDir/usr/share/icons/hicolor/scalable/apps/
+  - cp icon.svg AppDir/usr/share/icons/hicolor/scalable/apps/reverce_domain.app_name.svg
+AppDir:
+  path: ./AppDir
+  app_info:
+    id: reverce_domain.app_name
+    name: App Name
+    icon: reverce_domain.app_name
+    version: !ENV ${VERSION}
+    exec: app_binary
+    exec_args: $@
+AppImage:
+  arch: x86_64
+  update-information: guess
+  sign-key: None
