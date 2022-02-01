@@ -8,7 +8,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    relie
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
