@@ -16,6 +16,14 @@ docker pull lil5/appimage-builder
 docker run -i -v .:/app lil5/appimage-builder bash -c 'cd /app && appimage-builder --recipe AppImageBuilder.yml --skip-test'
 ```
 
+# Fork
+
+This includes a patch that uses `sed` to ensure that the `appimagetool` works.
+
+```
+sed -i 's|AI\x02|\x00\x00\x00|' appimagetool
+```
+
 # Repository
 
 <https://github.com/lil5/appimage-builder-docker>

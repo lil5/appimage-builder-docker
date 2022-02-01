@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-      - name: Generate html file
-        run: npx showdown makehtml -i README.md -o public-html/index.html
-        # DockerHub
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
