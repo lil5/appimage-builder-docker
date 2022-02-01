@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y install python3 python3-setuptools python3-pip wget fakeroot gnupg2 libglib2.0-bin file desktop-file-utils libgdk-pixbuf2.0-dev librsvg2-dev libyaml-dev zsync gtk-update-icon-cache strace elfutils musl musl-dev musl-tools
 
 # https://github.com/AppImageCrafters/appimage-builder/pull/179
-RUN wget https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage -O /opt/appimagetool \
+RUN wget https://github.com/probonopd/go-appimage/releases/download/continuous/appimaged-650-x86_64.AppImage -O /opt/appimagetool \
     && chmod +x /opt/appimagetool \
     && cd /opt/; sed -i 's|AI\x02|\x00\x00\x00|' appimagetool; /opt/appimagetool --appimage-extract \ 
     && mv /opt/squashfs-root /opt/appimagetool.AppDir \
