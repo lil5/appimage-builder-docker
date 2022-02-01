@@ -1,8 +1,12 @@
+![https://hub.docker.com/r/lil5/appimage-builder](https://img.shields.io/docker/v/lil5/appimage-builder)
+
 # Appimage Builder Docker
 
 _GNU/Linux packaging made easy!_ ™
 
 fork of <https://github.com/AppImageCrafters/appimage-builder>
+
+⚠️ This package currently does not work with github actions. [see AppImageKit 1027](https://github.com/AppImage/AppImageKit/issues/1027)
 
 # Example
 
