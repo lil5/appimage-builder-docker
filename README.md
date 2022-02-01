@@ -1,6 +1,6 @@
 # Appimage Builder Docker
 
-*GNU/Linux packaging made easy!* ™
+_GNU/Linux packaging made easy!_ ™
 
 fork of <https://github.com/AppImageCrafters/appimage-builder>
 
